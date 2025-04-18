@@ -1,0 +1,50 @@
+import java.util.Scanner;
+
+public class AIResumeBuilder {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Collecting user information
+        System.out.println("Enter your full name:");
+        String name = sc.nextLine();
+
+        System.out.println("Enter your email:");
+        String email = sc.nextLine();
+
+        System.out.println("Enter your phone number:");
+        String phone = sc.nextLine();
+
+        System.out.println("Enter your professional summary:");
+        String summary = sc.nextLine();
+
+        System.out.println("Enter your skills (comma separated):");
+        String skills = sc.nextLine();
+
+        System.out.println("Enter your education details:");
+        String education = sc.nextLine();
+
+        System.out.println("Enter your experience (or 'none'):");
+        String experience = sc.nextLine();
+
+        // AI Logic: suggest improvements (simplified)
+        if (summary.length() < 50) {
+            System.out.println("\nAI Tip: Consider expanding your summary for better impact.");
+        }
+
+        if (!skills.toLowerCase().contains("java")) {
+            System.out.println("AI Tip: Java is a highly demanded skill. Mention it if applicable.");
+        }
+
+        // Generate Resume
+        System.out.println("\n========== GENERATED RESUME ==========");
+        System.out.println("Name: " + name);
+        System.out.println("Email: " + email);
+        System.out.println("Phone: " + phone);
+        System.out.println("\n--- Professional Summary ---\n" + summary);
+        System.out.println("\n--- Skills ---\n" + skills);
+        System.out.println("\n--- Education ---\n" + education);
+        System.out.println("\n--- Experience ---\n" + experience);
+        System.out.println("=======================================");
+    }
+}
